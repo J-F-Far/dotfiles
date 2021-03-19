@@ -1,0 +1,10 @@
+- defaults:
+    link:
+        relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.config/nvim/init.vim: init.vim
+    ~/.bash_aliases: bash_aliases
+    
