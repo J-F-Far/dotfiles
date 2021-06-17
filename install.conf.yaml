@@ -9,4 +9,4 @@
     ~/.bash_aliases: bash_aliases
     ~/.config/awesome/rc.lua: rc.lua
     ~/.tmux.conf: tmux.conf
-    
+    ~/scripts: scripts 
