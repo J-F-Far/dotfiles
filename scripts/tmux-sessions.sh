@@ -49,6 +49,6 @@ getOrCreateNotes() {
 }
 
 createSession work primary -c $WORK_DIR
-createWindow work notes -c $NOTES nvim $(getOrCreateNotes)
+createWindow work notes -c $NOTES; tmux send-keys -t work:notes "nvim $(getOrCreateNotes)" Enter Space G
 createWindow work frdr_deploy -c $FRDR_DEPLOY; tmux send-keys -t work:frdr_deploy 'source ~/ansible/bin/activate' Enter
-createWindow work frdr_publish -c $FRDR_PUBLISH nvim .
+createWindow work frdr_publish -c $FRDR_PUBLISH; tmux send-keys -t work:frdr_publish 'nvim .' Enter
