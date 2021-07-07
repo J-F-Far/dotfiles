@@ -10,15 +10,15 @@ createWindow() {
     window=$2
     shift
     shift
-    hasWindow=$(tmux list-windows -t $session | grep "$window")
+    hasWindow=$(tmux list-windows -t "$session" | grep "$window")
     echo "$hasWindow"
     if [ -z "$hasWindow" ]; then
         cmd="tmux neww -t $session: -n $window -d"
         if [ $# -gt 0 ]; then
-            cmd="$cmd $@"
+            cmd="$cmd $*"
         fi
         echo "Creating Window(\"$hasWindow\"): $cmd"
-        eval $cmd
+        eval "$cmd"
     fi
 }
 
@@ -27,10 +27,10 @@ createSession() {
     window=$2
     shift
     shift
-    cmd="tmux new -s $session -d -n $window $@ > /dev/null 2>&1"
+    cmd="tmux new -s $session -d -n $window $* > /dev/null 2>&1"
 
     echo "Creating Session: $cmd"
-    eval $cmd
+    eval "$cmd"
 }
 
 # Get or create the notes file for the current year/month
@@ -40,10 +40,10 @@ getOrCreateNotes() {
     month=${month,}
 
     if [[ ! -e $NOTES/$year ]]; then
-        mkdir $NOTES/$year
+        mkdir "$NOTES/$year"
     fi
     if [[ ! -e $NOTES/$year/$month ]]; then
-        touch $NOTES/$year/$month
+        touch "$NOTES/$year/$month"
     fi
     echo "$NOTES/$year/$month"
 }

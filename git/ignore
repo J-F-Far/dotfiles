@@ -1,0 +1,2 @@
+# Ignore ShiftLeftScan reports in any git repo
+/reports
