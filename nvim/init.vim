@@ -47,6 +47,8 @@ let g:netrw_browse_split = 3
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin()
 
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-unimpaired'
@@ -55,13 +57,13 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'google/vim-jsonnet'
 
+" Initialize plugin system
+call plug#end()
+
 " vim-fugitive remaps
 nmap <leader>gh :diffget //3<CR>
 nmap <leader>gu :diffget //2<CR>
 nmap <leader>gs :G<CR>
-
-" Initialize plugin system
-call plug#end()
 
 let g:gruvbox_contrast_dark = 'hard'
 
@@ -72,4 +74,5 @@ set background=dark
 vmap <leader>y "*y
 nmap <leader>p "*p
 
-
+" Include Lua config
+lua require('config')

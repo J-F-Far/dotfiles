@@ -5,7 +5,8 @@
 - clean: ['~']
 
 - link:
-    ~/.config/nvim/init.vim: init.vim
+    ~/.config/nvim/init.vim: nvim/init.vim
+    ~/.config/nvim/lua/config.lua: nvim/config.lua
     ~/.config/git/ignore: git/ignore
     ~/.bash_aliases: bash_aliases
     ~/.config/awesome/rc.lua: rc.lua

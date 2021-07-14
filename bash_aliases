@@ -15,3 +15,6 @@ alias tms='tmux-sessions.sh; tmux a'
 # ShiftLeft Scan aliases
 alias scan='docker run --rm -e "WORKSPACE=${PWD}" -v $PWD:/app shiftleft/scan scan --build'
 alias reports='nohup firefox `find ./reports -type f -name "*.html" | xargs -n1 -I {} echo "-url {}"` > /dev/null &'
+
+# Use neovim 0.5.0 appimage
+alias nvim='~/nvim.appimage'
