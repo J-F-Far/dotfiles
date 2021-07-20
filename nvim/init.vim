@@ -56,6 +56,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'google/vim-jsonnet'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim', { 'branch': 'async_jobs_v2' }
+Plug 'nvim-telescope/telescope.nvim', { 'branch': 'async_v2' }
 
 " Initialize plugin system
 call plug#end()
@@ -76,3 +79,13 @@ nmap <leader>p "*p
 
 " Include Lua config
 lua require('config')
+
+" Set Python3 interpreter
+let g:python3_host_prog = '/home/joel/.venv/py3nvim/bin/python'
+
+" Using Lua functions
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
