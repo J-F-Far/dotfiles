@@ -59,6 +59,7 @@ Plug 'google/vim-jsonnet'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim', { 'branch': 'async_jobs_v2' }
 Plug 'nvim-telescope/telescope.nvim', { 'branch': 'async_v2' }
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Initialize plugin system
 call plug#end()
