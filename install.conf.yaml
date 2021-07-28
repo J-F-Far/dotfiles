@@ -9,6 +9,7 @@
     ~/.config/nvim/lua/config.lua: nvim/config.lua
     ~/.config/git/ignore: git/ignore
     ~/.bash_aliases: bash_aliases
-    ~/.config/awesome/rc.lua: rc.lua
+    ~/.profile: profile
+    #    ~/.config/awesome/rc.lua: rc.lua
     ~/.tmux.conf: tmux.conf
     ~/scripts: scripts 
