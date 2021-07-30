@@ -28,11 +28,37 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 " Remap <Esc> to jj to make it easier to re-enter command mode
 inoremap jj <Esc>
 
+" Make yank behave like C, D, etc 
+nnoremap Y y$
+
+" Keep cursor centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" Undo Breakpoints
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+
+" Jumplist mutations
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
+
+" Moving text
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+inoremap <C-j> <C-O>:m .+1<CR><C-O>==
+inoremap <C-k> <C-O>:m .-2<CR><C-O>==
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
+
 " Move in Splits
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
+" nnoremap <leader>h :wincmd h<CR>
+" nnoremap <leader>j :wincmd j<CR>
+" nnoremap <leader>k :wincmd k<CR>
+" nnoremap <leader>l :wincmd l<CR>
 
 nnoremap <leader>pv :vertical topleft split <bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <silent> <leader>+ :vertical resize +5<CR>
