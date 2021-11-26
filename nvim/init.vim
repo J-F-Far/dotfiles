@@ -55,10 +55,10 @@ nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
 
 " Move in Splits
-" nnoremap <leader>h :wincmd h<CR>
-" nnoremap <leader>j :wincmd j<CR>
-" nnoremap <leader>k :wincmd k<CR>
-" nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>wh :wincmd h<CR>
+nnoremap <leader>wj :wincmd j<CR>
+nnoremap <leader>wk :wincmd k<CR>
+nnoremap <leader>wl :wincmd l<CR>
 
 nnoremap <leader>pv :vertical topleft split <bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <silent> <leader>+ :vertical resize +5<CR>
@@ -73,6 +73,7 @@ let g:netrw_browse_split = 3
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin()
 
+" plugins
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'gruvbox-community/gruvbox'
@@ -86,6 +87,11 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim', { 'branch': 'async_jobs_v2' }
 Plug 'nvim-telescope/telescope.nvim', { 'branch': 'async_v2' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+" nvim-cmp
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
 
 " Initialize plugin system
 call plug#end()
@@ -116,3 +122,51 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
+" nvim-cmp config
+set completeopt=menu,menuone,noselect
+
+" lua <<EOF
+"   -- Setup nvim-cmp.
+"   local cmp = require'cmp'
+" 
+"   cmp.setup({
+"     snippet = {
+"       expand = function(args)
+"         -- For `vsnip` user.
+"         vim.fn["vsnip#anonymous"](args.body)
+" 
+"         -- For `luasnip` user.
+"         -- require('luasnip').lsp_expand(args.body)
+" 
+"         -- For `ultisnips` user.
+"         -- vim.fn["UltiSnips#Anon"](args.body)
+"       end,
+"     },
+"     mapping = {
+"       ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+"       ['<C-f>'] = cmp.mapping.scroll_docs(4),
+"       ['<C-Space>'] = cmp.mapping.complete(),
+"       ['<C-e>'] = cmp.mapping.close(),
+"       ['<CR>'] = cmp.mapping.confirm({ select = true }),
+"     },
+"     sources = {
+"       { name = 'nvim_lsp' },
+" 
+"       -- For vsnip user.
+"       { name = 'vsnip' },
+" 
+"       -- For luasnip user.
+"       -- { name = 'luasnip' },
+" 
+"       -- For ultisnips user.
+"       -- { name = 'ultisnips' },
+" 
+"       { name = 'buffer' },
+"     }
+"   })
+" 
+"   -- Setup lspconfig.
+"   require('lspconfig')[%YOUR_LSP_SERVER%].setup {
+"     capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+"   }
+" EOF
