@@ -68,3 +68,7 @@ fi
 # ANSIBLE VAULT DEFAULT PASSWORD FILE
 export ANSIBLE_VAULT_PASSWORD_FILE=~/Work/vaultpw.txt
 
+# Rootless Docker setup
+export PATH=/usr/bin:$PATH
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
+
