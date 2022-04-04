@@ -47,7 +47,6 @@ export PATH=$PATH:~/.rbenv/bin
 # Add ~/Software to PATH
 export PATH=$PATH:~/Software
 
-source "$HOME/.cargo/env"
 
 # Load .bashrc if it isn't set for login shells
 # if running bash
@@ -68,3 +67,8 @@ fi
 # ANSIBLE VAULT DEFAULT PASSWORD FILE
 export ANSIBLE_VAULT_PASSWORD_FILE=~/Work/vaultpw.txt
 
+. "$HOME/.cargo/env"
+
+# set default editor to nvim
+export EDITOR=nvim
+export VISUAL=nvim

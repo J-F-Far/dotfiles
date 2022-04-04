@@ -1,30 +1,11 @@
 -- Import all the indiviual .lua config files
-require "lua.user.options"
---require "user.keymaps"
+require "user.options"
+require "user.keymaps"
+require "user.plugins"
+require "user.nvim-tree"
+require "user.telescope"
 --require "user.colorscheme"
---local set = vim.opt
 --
-----set.noerrorbells
---set.tabstop = 4
---set.softtabstop = 4
---set.shiftwidth = 4
---set.expandtab = true
---set.smartindent = true
---set.relativenumber = true
-----set.nu = true
-----set.nohlsearch = true
-----set.nowrap = true
-----set.noswapfile = true
-----set.nobackup = true
---set.undodir = "~/.local/share/nvim/undo"
---set.undofile = true
---set.incsearch = true
---set.splitright = true
---set.scrolloff = 8
---
-----set.colorcolumn = 80
---set.signcolumn = true
-
 ---- LSP config
 --require'lspconfig'.pyright.setup{}
 --require'lspconfig'.bashls.setup{}

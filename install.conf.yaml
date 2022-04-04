@@ -6,7 +6,12 @@
 
 - link:
     ~/.config/nvim/init.vim: nvim/init.vim
-    ~/.config/nvim/lua/config.lua: nvim/config.lua
+      #    ~/.config/nvim/config.lua: nvim/lua/config.lua
+    ~/.config/nvim/lua/config.lua: nvim/lua/config.lua
+    ~/.config/nvim/lua/user/:
+      create: true
+      glob: true
+      path: nvim/lua/user/*.lua
     ~/.config/git/ignore: git/ignore
     ~/.bash_aliases: bash_aliases
     ~/.profile: profile
