@@ -49,6 +49,8 @@ return packer.startup(function(use)
   use "ahmedkhalf/project.nvim" -- Project manager 
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
 
    --use "tpope/vim-unimpaired" -- 
 

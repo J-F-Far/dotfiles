@@ -67,7 +67,9 @@ fi
 # ANSIBLE VAULT DEFAULT PASSWORD FILE
 export ANSIBLE_VAULT_PASSWORD_FILE=~/Work/vaultpw.txt
 
-. "$HOME/.cargo/env"
+## Rootless Docker setup
+#export PATH=/usr/bin:$PATH
+#export DOCKER_HOST=unix:///run/user/1000/docker.sock
 
 # set default editor to nvim
 export EDITOR=nvim

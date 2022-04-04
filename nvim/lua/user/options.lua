@@ -23,6 +23,7 @@ local options = {
     scrolloff = 8,
     colorcolumn = "80",
     signcolumn = "yes",
+    termguicolors = true,                   -- Req'd for bufferline to work
 }
 
 for k, v in pairs(options) do
