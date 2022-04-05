@@ -5,6 +5,7 @@ require "user.plugins"
 require "user.nvim-tree"
 require "user.telescope"
 require "user.bufferline"
+require "user.cmp"
 --require "user.colorscheme"
 --
 ---- LSP config
