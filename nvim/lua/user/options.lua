@@ -17,7 +17,6 @@ local options = {
     swapfile = false,                       -- do not generate swap files
     backup = false,							-- create backup file
     undofile = true,                        -- persistent undo
-    undodir = "~/.local/share/nvim/undo",   -- persisten undofile location
     incsearch = true,
     splitright = true,
     scrolloff = 8,
