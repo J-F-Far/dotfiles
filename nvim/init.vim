@@ -71,7 +71,7 @@ nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
-call plug#begin()
+"call plug#begin()
 
 "Plug 'neovim/nvim-lspconfig'
 "Plug 'nvim-lua/completion-nvim'
@@ -90,7 +90,7 @@ call plug#begin()
 "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Initialize plugin system
-call plug#end()
+"call plug#end()
 
 " vim-fugitive remaps
 nmap <leader>gh :diffget //3<CR>

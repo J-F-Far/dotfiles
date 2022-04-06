@@ -52,8 +52,7 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
 
-   --use "tpope/vim-unimpaired" -- 
-
+  use "tpope/vim-unimpaired"
   use "tpope/vim-surround"
 
   -- cmp plugins
