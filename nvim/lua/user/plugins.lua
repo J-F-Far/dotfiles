@@ -61,18 +61,12 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
---  use "hrsh7th/cmp-nvim-lsp"
---  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
+  use "hrsh7th/cmp-nvim-lsp"
+  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
 
   -- snippets
   use "L3MON4D3/LuaSnip"                        -- snippet engine
   use "rafamadriz/friendly-snippets"            -- a bunch of snippets to use
-
-  -- LSP
-  use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
-  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -82,6 +76,13 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+
+  -- LSP
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
