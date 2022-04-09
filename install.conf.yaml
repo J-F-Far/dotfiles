@@ -11,7 +11,7 @@
     ~/.config/nvim/lua/user/:
       create: true
       glob: true
-      path: nvim/lua/user/**/*
+      path: nvim/lua/user/**
     ~/.config/git/ignore: git/ignore
     ~/.bash_aliases: bash_aliases
     ~/.profile: profile
