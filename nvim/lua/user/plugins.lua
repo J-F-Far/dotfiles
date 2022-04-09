@@ -51,6 +51,7 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua"
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
+  use "numToStr/Comment.nvim" -- Easily comment stuff
 
   use "tpope/vim-unimpaired"
   use "tpope/vim-surround"
@@ -76,6 +77,7 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
