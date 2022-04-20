@@ -74,3 +74,5 @@ export ANSIBLE_VAULT_PASSWORD_FILE=~/Work/vaultpw.txt
 # set default editor to nvim
 export EDITOR=nvim
 export VISUAL=nvim
+
+export PATH="$HOME/.poetry/bin:$PATH"
