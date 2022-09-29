@@ -14,6 +14,7 @@
       path: nvim/lua/user/**
     ~/.config/git/ignore: git/ignore
     ~/.bash_aliases: bash_aliases
+    ~/.bash_functions: bash_functions 
     ~/.profile: profile
     #    ~/.config/awesome/rc.lua: rc.lua
     ~/.tmux.conf: tmux.conf
